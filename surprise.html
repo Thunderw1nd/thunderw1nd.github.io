@@ -15,8 +15,8 @@
 <body>
 <canvas id="mycanvas"></canvas>
 <div id="text">
-    <input type="number" id="getColorRange" name="getColorRange" min="0" max="360"/>
-    <input type="submit" value="更改颜色(0~360)" onclick="submitColorRange(hue)"/>
+    <input type="number" id="getColorRange" name="getColorRange" min="0" max="360" style="width: 100px;height: 36px;"/>
+    <input type="submit" value="更改颜色(0~360)" style="height: 36px;width: 100px;" onclick="submitColorRange() "/>
     <h style="color:white">情人节快乐❤️</h>
 </div>
 <style>
@@ -46,7 +46,7 @@
     //转换成2d模型
     var ctx=area.getContext("2d");
     //烟花数组
-    hue=260;//设置颜色范围
+    var hue=260;//设置颜色范围
     timerTick = 0;//计时器
     timerTotal=5;//每间隔5秒烟花绽放一次
     fireworks=[];//存放烟花数组
@@ -55,7 +55,7 @@
     function random(min,max){
         return Math.random()*(max-min)+min;
     }
-    function submitColorRange(int hue){
+    function submitColorRange(){
         hue=document.getElementById("getColorRange").value;   
     }
     //计算两点之间的距离
