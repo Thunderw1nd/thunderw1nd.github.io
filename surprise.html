@@ -15,7 +15,7 @@
 <body>
 <canvas id="mycanvas"></canvas>
 <div id="text">
-    <h style="color:white">情人节快乐</h>
+    <h style="color:white">情人节快乐❤️</h>
 </div>
 <style>
     #text{
@@ -185,7 +185,6 @@
         //requestAnimationFrame() 方法来告诉浏览器需要执行的动画，
         // 并让浏览器在下一次重绘之前调用指定的函数来更新动画。
         requestAnimationFrame(loop);
-        hue+=0.5;
         //在源图像外显示目标图像。只有源图像外的目标图像部分会被显示，源图像是透明的。
         ctx.globalCompositeOperation = 'destination-out';
         ctx.fillRect(0,0,clientw,clienth);
