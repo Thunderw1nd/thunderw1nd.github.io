@@ -15,6 +15,8 @@
 <body>
 <canvas id="mycanvas"></canvas>
 <div id="text">
+    <input type="number" id="getColorRange" name="getColorRange" min="0" max="360"/>
+    <input type="submit" value="更改颜色(0~360)" onclick="submitColorRange(hue)"/>
     <h style="color:white">情人节快乐❤️</h>
 </div>
 <style>
@@ -52,6 +54,9 @@
     //随机min和max之间的值
     function random(min,max){
         return Math.random()*(max-min)+min;
+    }
+    function submitColorRange(int hue){
+        hue=document.getElementById("getColorRange").value;   
     }
     //计算两点之间的距离
     function distans(sx,sy,tx,ty){
