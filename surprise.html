@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-<canvas id="mycanvas"></canvas>
+<canvas id="mycanvas" style="position:absolute;z-index:-2;"></canvas>
 <div id="text">
     <input type="number" id="getColorRange" name="getColorRange" min="0" max="360" style="width: 100px;height: 36px;"/>
     <input type="submit" value="更改颜色(0~360)" style="height: 36px;width: 100px;" onclick="submitColorRange() "/>
@@ -22,10 +22,14 @@
 <style>
     #text{
         margin:auto;
-        width:50%;
+        
         align-content: center;
         text-align: center;
         font-size: 36px;
+        position:fixed;
+        bottom: 0px;
+        left: 25%;
+        right: 25%;
     }
 </style>
 <script>
@@ -42,7 +46,7 @@
     //获取canvas区域.并设置宽和高
     var area=document.getElementById("mycanvas");
     area.width=document.documentElement.clientWidth;
-    area.height=document.documentElement.clientHeight * 0.93;
+    area.height=document.documentElement.clientHeight;
     //转换成2d模型
     var ctx=area.getContext("2d");
     //烟花数组
